@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    .radioButtons {
+      display: flex;
+      justify-content: space-around;
+    }
+    .container {
+      background-color: aquamarine;
+      width: 100%;
+    }
+    #nameError,
+    #emailError,
+    #passwordError,
+    #confirmError,
+    #ageError,
+    #countryError,
+    #colourError,
+    #subError {
+      color: red;
+      font-size: 14px;
+    }
+    #objName,
+    #objEmail,
+    #objAge,
+    #objPassword,
+    #objCountry,
+    #objColor,
+    #objSub {
+      font-size: 16px;
+      color: black;
+      font-size: 16px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #animationDiv {
+      font-size: 30px;
+      width: 250px;
+      position: relative;
+      animation-name: noor;
+      animation-duration: 25s;
+      background-color: aquamarine;
+      display: none;
+    }
+    @keyframes noor {
+      0% {
+        background-color: red;
+        left: 100px;
+        top: 1000px;
+      }
+      25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+      }
+      50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+      }
+      75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+      }
+      100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+      }
+    }
+  </style>
+  <body>
+    <div id="animationDiv">Hurray!Successful</div>
+    <div class="container">
+      <form id="form">
+        <div class="mb-3 col-3">
+          <label for="exampleFormControlInput1" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="name"
+          />
+        </div>
+        <p id="nameError"></p>
+        <div class="mb-3 col-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="name@example.com"
+          />
+        </div>
+        <p id="emailError"></p>
+        <div class="mb-3 col-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Password</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="password"
+          />
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="show"
+            onclick="showPassword()"
+          />
+          <label class="form-check-label" for="defaultCheck1">
+            Show Password
+          </label>
+        </div>
+        <p id="passwordError"></p>
+        <div class="mb-3 col-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Confirm Password</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="confirm"
+            placeholder="Confirm password"
+          />
+        </div>
+        <p id="confirmError"></p>
+        <div class="mb-3 col-3">
+          <label for="exampleFormControlInput1" class="form-label">Age</label>
+          <input
+            type="number"
+            class="form-control"
+            id="age"
+            placeholder="Age"
+          />
+        </div>
+        <p id="ageError"></p>
+        <div class="mb-3 col-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Select Country</label
+          >
+          <select
+            class="form-select form-select-sm"
+            aria-label=".form-select-sm example"
+            id="country"
+          >
+            <option value="">select</option>
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="england">England</option>
+          </select>
+        </div>
+        <p id="countryError"></p>
+        <div class="mb-3 col-3 flex">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Favourite Color</label
+          >
+          <div class="radioButtons">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                value="red"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Red
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                value="blue"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                blue
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                value="green"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Green
+              </label>
+            </div>
+          </div>
+        </div>
+        <p id="colourError"></p>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="subscription"
+            onclick="sub()"
+          />
+          <label class="form-check-label" for="defaultCheck1">
+            Subscription
+          </label>
+        </div>
+        <p id="subError"></p>
+        <button type="submit" class="btn btn-primary" value="submit">
+          Submit
+        </button>
+        <!-- <input type="submit" value="Submit" /> -->
+      </form>
+
+      <!-- Modal -->
+
+      <div
+        class="modal fade"
+        id="resultModal"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                User Details
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p id="objName"></p>
+              <p id="objEmail"></p>
+              <p id="objAge"></p>
+              <p id="objPassword"></p>
+              <p id="objCountry"></p>
+              <p id="objColor"></p>
+              <p id="objSub"></p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Understood
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="index.js"></script>
